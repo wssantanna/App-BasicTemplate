@@ -1,0 +1,35 @@
+
+* { box-sizing: border-box; }
+
+body { font-family: Arial, Helvetica, sans-serif; }
+
+.l-app {
+    display: grid;
+    max-width: 960px;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 1fr 25px;
+    gap: 5px;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar carousel carousel carousel"
+    "footer footer footer footer";
+}
+
+.l-nav {
+    grid-area: nav;
+}
+
+.l-sidebar {
+    grid-area: sidebar;
+}
+
+.l-carousel {
+    grid-area: carousel;
+}
+
+.l-footer {
+    grid-area: footer;
+}
