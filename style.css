@@ -1,11 +1,20 @@
 
 * { box-sizing: border-box; }
 
+*::placeholder { font-family: Arial, Helvetica, sans-serif; }
+
 html {
     font-size: 18px;
 }
 
 body { font-family: Arial, Helvetica, sans-serif; }
+
+.h1, 
+.h2 { font-family: Arial Black, Arial, Helvetica, sans-serif; }
+
+.h1 { font-size: 1.8rem; }
+
+.h2 { font-size: 1.5rem; }
 
 .txt-center {
     text-align: center;
@@ -22,11 +31,12 @@ body { font-family: Arial, Helvetica, sans-serif; }
     padding: 0 20px;
 
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 50px 1fr 25px;
+    grid-template-rows: 50px auto auto 25px;
     gap: 10px;
     grid-template-areas: 
         "nav nav nav nav"
         "wrapper wrapper wrapper wrapper"
+        "wrapper-card wrapper-card wrapper-card wrapper-card"
         "footer footer footer footer";
 }
 
@@ -46,9 +56,14 @@ body { font-family: Arial, Helvetica, sans-serif; }
     grid-area: wrapper;
 }
 
+.l-wrapper-card {
+    grid-area: wrapper-card;
+}
+
 .l-footer {
     grid-area: footer;
-    margin-top: 25px;
+    margin: 10px 0;
+    padding: 10px 0;
 }
 
 /*
@@ -68,6 +83,7 @@ body { font-family: Arial, Helvetica, sans-serif; }
 */
 .c-nav {
     display: flex;
+    flex-direction: column;
     gap: 25px;
 }
 
@@ -87,7 +103,7 @@ body { font-family: Arial, Helvetica, sans-serif; }
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    height: 200px;
+    height: 320px;
     padding: 25px;
     justify-content: center;
     width: 100%;
@@ -129,6 +145,57 @@ body { font-family: Arial, Helvetica, sans-serif; }
     width: 100%;
 }
 
+.c-form__textarea {
+    min-height: 100px;
+}
+
+/*
+    Button
+
+*/
+.c-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    display: block;
+    font-family: Arial Black, Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+    padding: 10px 25px;
+    width: 100%;
+}
+
+.c-btn:hover {
+    background-color: orangered;
+    transition: all .5s;
+    transform: scale(1.03) translateY(-5px);
+}
+
+/*
+    Cartão
+
+*/
+.c-card {
+    margin: 0;
+}
+
+.c-card:hover {
+    transition: all .5s;
+    transform: scale(1.02) translateY(-5px);
+}
+
+.c-card__thumbnail {
+    display: block;
+    border: none;
+    border-radius: 10px;
+}
+
+.c-card__description {
+    font-size: .9rem;
+    margin: 15px 10px;
+    width: 100%;
+}
+
 /*
     Responsividade...
     Desktop
@@ -141,6 +208,10 @@ body { font-family: Arial, Helvetica, sans-serif; }
         font-size: 16px;
     }
 
+    .c-nav {
+        flex-direction: row;
+    }
+
     .c-form__row {
         display: flex;
         gap: 10px;
@@ -148,5 +219,10 @@ body { font-family: Arial, Helvetica, sans-serif; }
 
     .c-form__group {
         flex: 1;
+    }
+
+    .c-btn {
+        display: inline-block;
+        width: auto;
     }
 }
