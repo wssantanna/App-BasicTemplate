@@ -14,22 +14,90 @@
 
         <!-- Navegação -->
         <div class="l-nav">
-    
+            <a 
+                class="c-logo" 
+                href="/"
+            >
+                LOGO
+            </a>
+            <nav class="c-nav">
+                <a 
+                    href="#" 
+                    class="c-nav__item"
+                >
+                    Sobre
+                </a>
+                <a 
+                    href="/contato" 
+                    class="c-nav__item"
+                >
+                    Contato
+                </a>
+            </nav>
         </div>
 
-        <!-- Menu lateral -->
-        <div class="l-sidebar">
-    
-        </div>
-    
-        <!-- Destaque -->
-        <div class="l-carousel">
-    
+        <!-- Conteúdo principal -->
+        <div class="l-wrapper">
+            <article>
+                <h1>Contato</h1>
+                <form name="FormRegister">
+                    <div class="c-form__group">
+                        <label 
+                            class="c-form__label"
+                            for="" 
+                        >
+                            Nome
+                        </label>
+                        <input 
+                            type="text" 
+                            class="c-form__control"
+                            placeholder="Digita seu nome completo"
+                            required
+                        >
+                    </div>
+                    <div class="c-form__group">
+                        <label 
+                            class="c-form__label"
+                            for="" 
+                        >
+                            Telefone
+                        </label>
+                        <!-- 
+                            Expressão regular 
+                            https://pt.stackoverflow.com/questions/46672/como-fazer-uma-express%C3%A3o-regular-para-telefone-celular
+
+                            pattern="^\(?[1-9]{2}\)? ?(?:[2-8]|9[1-9])[0-9]{3}\-?[0-9]{4}$"
+                        -->
+                        <input 
+                            type="tel" 
+                            class="c-form__control"
+                            placeholder="Digite o número do seu telefone"
+                            required
+                        >
+                    </div>
+                    <div class="c-form__group">
+                        <label 
+                            class="c-form__label"
+                            for="" 
+                        >
+                            Mensagem
+                        </label>
+                        <textarea 
+                            class="c-form__textarea"
+                            name="" 
+                            id="" 
+                            placeholder="Descreva seu problema..."
+                        ></textarea>
+                    </div>
+                </form>
+            </article>
         </div>
     
         <!-- Rodapé -->
         <div class="l-footer">
-    
+            <footer class="txt-center">
+                <span class="txt-small">Todos os direitos reservados.</span>
+            </footer>
         </div>
 
     </div>

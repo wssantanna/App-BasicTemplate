@@ -3,33 +3,120 @@
 
 body { font-family: Arial, Helvetica, sans-serif; }
 
+.txt-center {
+    text-align: center;
+}
+
+.txt-small {
+    font-size: .7rem;
+}
+
 .l-app {
     display: grid;
-    max-width: 960px;
-    min-height: 100vh;
+    max-width: 720px;
     margin: 0 auto;
+    padding: 0 20px;
 
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 50px 1fr 25px;
-    gap: 5px;
+    gap: 10px;
     grid-template-areas: 
-    "nav nav nav nav"
-    "sidebar carousel carousel carousel"
-    "footer footer footer footer";
+        "nav nav nav nav"
+        "wrapper wrapper wrapper wrapper"
+        "footer footer footer footer";
 }
 
 .l-nav {
+    align-items: center;
+    display: flex;
     grid-area: nav;
+    gap: 50px;
 }
 
 .l-sidebar {
     grid-area: sidebar;
 }
 
-.l-carousel {
-    grid-area: carousel;
+.l-wrapper {
+    margin-top: 25px;
+    grid-area: wrapper;
 }
 
 .l-footer {
     grid-area: footer;
+    margin-top: 25px;
+}
+
+/*
+    Logo
+
+*/
+.c-logo {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+/*
+    Nav
+
+*/
+.c-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.c-nav__item {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/*
+    Carousel
+
+*/
+.c-carousel {
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    padding: 25px;
+    justify-content: center;
+    width: 100%;
+}
+
+.c-carousel__display {
+    font-size: 1.575rem;
+    margin: 0;
+}
+
+.c-carousel__description {
+    font-size: .9rem;
+}
+
+/*
+    Form
+
+*/
+.c-form__group {
+    margin: 15px 0;
+}
+
+.c-form__label {
+    display: block;
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+
+.c-form__control,
+.c-form__textarea {
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
 }
