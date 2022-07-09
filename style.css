@@ -1,6 +1,10 @@
 
 * { box-sizing: border-box; }
 
+html {
+    font-size: 18px;
+}
+
 body { font-family: Arial, Helvetica, sans-serif; }
 
 .txt-center {
@@ -106,6 +110,10 @@ body { font-family: Arial, Helvetica, sans-serif; }
     margin: 15px 0;
 }
 
+.c-form__row {
+    display: block;
+}
+
 .c-form__label {
     display: block;
     font-size: .9rem;
@@ -119,4 +127,26 @@ body { font-family: Arial, Helvetica, sans-serif; }
     font-size: 1rem;
     padding: 10px;
     width: 100%;
+}
+
+/*
+    Responsividade...
+    Desktop
+
+*/
+@media (min-width: 720px)
+{
+
+    html {
+        font-size: 16px;
+    }
+
+    .c-form__row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .c-form__group {
+        flex: 1;
+    }
 }
